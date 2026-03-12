@@ -1,0 +1,659 @@
+@charset "UTF-8";
+/* 
+common  */
+
+img {
+    width: 100%;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+li {
+    list-style: none;
+}
+
+
+.container {
+    max-width: 100%;
+    margin: 0 auto;
+    /* / */
+}
+
+.flex-box {
+    display: flex;
+    /* max-width: 100%; */
+    justify-content: center;
+}
+
+main,
+footer {
+    margin-left: 300px;
+}
+
+body {
+
+    position: relative;
+}
+
+
+
+
+/* header */
+
+.logo img {
+    width: 180px;
+    padding-top: 10px;
+    padding-left: 10px;
+}
+
+.logo-sp {
+    width: 180px;
+    padding-top: 10px;
+    padding-left: 10px;
+    display: none;
+}
+
+header {
+    position: relative;
+}
+
+header .left {
+    background-color: white;
+    width: 300px;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    padding-top: 40px;
+    padding-left: 40px;
+    padding-right: 40px;
+    font-size: 14px;
+    overflow-y: auto;
+}
+
+header .left li {
+    padding-top: 15px;
+}
+
+
+
+.sns a {
+    display: block;
+}
+
+.sns {
+    padding-top: 70px;
+}
+
+.sns a:nth-child(n+2) {
+    padding-top: 15px;
+}
+
+.hamburger {
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    transition: 0.5s;
+    cursor: pointer;
+    display: none;
+}
+
+.hamburger span {
+    display: block;
+    height: 2px;
+    width: 100%;
+    background-color: black;
+    position: absolute;
+    display: none;
+}
+
+
+.hamburger span:nth-child(1) {
+    top: 20%;
+}
+
+.hamburger span:nth-child(2) {
+    top: 50%;
+}
+
+.hamburger span:nth-child(3) {
+    top: 80%;
+}
+
+
+
+/* main     */
+
+
+video {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    position: fixed;
+    top: 0;
+    z-index: -10;
+}
+
+main {
+    /* background-color: blue; */
+
+    /* transform: translateX(-50%);
+    left: 50%; */
+    z-index: 20;
+}
+
+section {
+    padding: 0 40px
+}
+
+.wrapper {
+    /* background-color: blueviolet; */
+    max-width: 900px;
+    /* ←ｐｘで指定するとcontaierも同じ幅になってしまう  %にしたらやりたいようにできた */
+    margin: 0 auto;
+}
+
+section:nth-child(1),
+section:nth-child(2) {
+    color: white;
+}
+
+
+
+section h1 {
+    padding-top: 100px;
+    text-align: center;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+section h1::before,
+section h1::after {
+    content: "";
+    background-color: rgb(255, 255, 255);
+    width: 30%;
+    height: 1px;
+
+
+}
+
+section:first-child {
+
+    background: linear-gradient(rgba(255, 255, 255, 0), rgba(15, 15, 15, 0.5));
+}
+
+section:first-child .photos {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 25px;
+
+}
+
+section:first-child .photos a::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    box-shadow: 0 -30px 20px -1px #2e2e2e inset;
+}
+
+
+
+
+section:first-child .photos a {
+    position: relative;
+    display: inline-block;
+}
+
+section:first-child .photos p {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    font-size: 12px;
+
+    color: white;
+
+}
+
+section:first-child .photos img::after {
+    content: "";
+    box-shadow: inset 0 0 -10px -1px rgb(180, 58, 58);
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+
+
+.items {
+    display: flex;
+    justify-content: space-between;
+    color: white;
+}
+
+.items .item {
+    text-align: center;
+    width: 32%;
+    align-items: center;
+
+}
+
+section:nth-child(2) .btn {
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border-radius: 50%;
+    border: 1px solid rgb(255, 255, 255);
+    width: 100%;
+    padding:calc(50% - 7.5px) 0;
+    line-height: 15px;
+    color: white;
+    position: relative;
+    overflow: hidden;
+}
+
+section:nth-child(2) .inner {}
+
+section:nth-child(2) a::after {
+    content: "";
+    width: 100%;
+    height: 100%;
+    background-color: rgba(189, 186, 186, 0.5);
+    position: absolute;
+    left: -100%;
+    top: 0;
+    transition: 0.5s;
+    pointer-events: none;
+
+}
+
+section:nth-child(2) a:hover::after {
+    left: 0;
+}
+
+section:nth-child(2) h3 {
+    padding-top: 20px;
+}
+
+.inner {
+
+    padding-right: 30px;
+    /* border: 1px solid red; */
+    display: flex;
+}
+
+section:nth-child(2) {
+    padding-bottom: 140px;
+    background-color: rgba(15, 15, 15, 0.5)
+}
+
+
+section h1 {
+    padding-bottom: 40px;
+
+}
+
+section:nth-child(3) {}
+
+section:nth-child(n+3) h1::before,
+section:nth-child(n+3) h1::after {
+    background-color: black;
+}
+
+section:nth-child(3),
+section:nth-child(4) {
+    background-color: white;
+}
+
+section:nth-child(3) h3 {
+    font-weight: normal;
+}
+
+section:nth-child(3) .left {
+    
+    position: relative;
+    margin-right: 10%;
+}
+
+section:nth-child(3) .right {
+    width: 70%;
+}
+
+section:nth-child(3) .right p {
+    margin-top: 10px;
+    padding-bottom: 40px;
+    border-top: 1px solid black;
+}
+
+section:nth-child(3) .right {
+    color: rgb(29, 29, 29);
+}
+
+
+section:nth-child(3) .left::before {
+    content: "";
+    width: 40px;
+    height: 500px;
+    background-color: yellow;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+
+}
+
+.box {
+    background-color: rgb(48, 48, 48);
+    padding: 30px 0;
+    width: 200px;
+    margin-bottom: 40px;
+    font-size: 14px;
+    text-align: center;
+    color: white;
+    position: relative;
+}
+
+.box::before{
+    content: "";
+    position: absolute;
+
+    left:50%;
+    top: 100%;
+    transform: translateX(-50%);
+    border-top:30px solid rgb(48, 48, 48);
+    border-left: 100px solid transparent;
+    border-right: 100px solid transparent;
+}
+
+
+
+/* section:nth-child(3) .inner {
+    display: flex;
+} */
+
+section:nth-child(3) .number {
+    width: 35px;
+    height: 35px;
+    margin-right: 20px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(48, 48, 48);
+    color: white;
+    flex-shrink: 0;
+    /*　←これをつけると円がきれいになるらしい */
+
+
+}
+
+section:nth-child(4) .flex-box {
+    justify-content: space-between;
+}
+
+
+
+section:nth-child(n+3) .flex-box {
+
+    padding-top: 60px;
+
+}
+
+section:nth-child(4) .flex-box {
+    padding-bottom: 130px;
+}
+
+section:nth-child(4) .icon img {
+    width: 60px;
+    position: absolute;
+    top: 50%;
+
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+section:nth-child(4) .icon p {
+    position: absolute;
+    top: 70%;
+
+    left: 50%;
+    transform: translateX(-50%)
+}
+
+section:nth-child(4) .icon {
+    width: 250px;
+    height: 200px;
+    border: 1px solid black;
+    position: relative;
+}
+
+section:nth-child(4) .icon:hover {
+    outline: 3px solid black;
+    transition: 0.1s;
+}
+
+.triangle {
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-color: transparent transparent #000000 transparent;
+    border-width: 0px 0px 15px 15px;
+    position: absolute;
+    bottom: 5px;
+    right: 5px;
+}
+
+
+
+/* footer */
+
+footer {
+    padding: 100px 0;
+    height: 300px;
+    background-color: black;
+    color: white;
+
+}
+
+
+footer .flex-box {}
+
+footer a {
+    font-size: 15px;
+    padding: 0 20px;
+
+    border-right: 1px solid white;
+    color: white;
+    display: ;
+}
+
+footer a:last-child {
+    border-right: none;
+}
+
+
+small {
+    display: block;
+    text-align: center;
+    padding-top: 80px;
+}
+
+/* トップに戻るボタン */
+#back-to-top {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    color: rgb(255, 255, 255);
+    background-color: rgb(0, 0, 0);
+    border: 1px solid white;
+    cursor: pointer;
+    z-index: 100;
+    /* display: none; */
+}
+
+
+
+/* レスポンシブ */
+
+body {
+    position: relative;
+}
+
+@media (max-width:960px) {
+    header .left {
+        position: absolute;
+        left: -300px;
+    }
+
+    main,
+    footer {
+        margin-left: 0px;
+    }
+
+    header {
+        height:70px;
+        background-color: white;
+    }
+
+    .left .logo {
+        display: none;
+    }
+
+    .logo-sp {
+        display: block;
+    }
+
+    .hamburger {
+        display: block;
+    }
+
+    .hamburger span {
+        display: block;
+    }
+
+    .open .mask {
+        display: block;
+
+    }
+
+    .mask {
+        display: none;
+        background-color: rgba(0, 0, 0, 0.5);
+        width: 100vw;
+        height: 100vh;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 10;
+    }
+
+    .open {
+        position: absolute;
+        left: 0;
+        transition: 0.5s;
+    }
+
+    .open .hamburger span:nth-child(1),
+    .open .hamburger span:nth-child(2) {
+        top: 50%;
+        transform: rotate(-45deg);
+    }
+
+
+    .open .hamburger span:nth-child(3) {
+        top: 50%;
+        transform: rotate(45deg);
+    }
+
+    .open header .left nav,
+    .open header .left .sns {
+        position: absolute;
+        left: 0px;
+    }
+
+    .open .hamburger span:nth-child(2) {
+    opacity: 0;
+  }
+
+    /* main */
+
+    section:first-child .photos {
+        grid-template-columns: 1fr;
+    }
+
+    section h1 {
+        font-size: 20px;
+    }
+
+    section:nth-child(3) .flex-box {
+        display: block;
+
+    }
+
+    section:nth-child(3) .left,
+    section:nth-child(3) .right {
+        width: 100%;
+
+    }
+
+    .box {
+        width: 100%;
+        margin-bottom: 60px;
+    }
+
+    .box {
+    background-color: rgb(48, 48, 48);
+    padding: 30px 0;
+    
+    width: calc(100vw - 80px);
+    margin-bottom: 40px;
+    font-size: 14px;
+    text-align: center;
+    color: white;
+    position: relative;
+}
+
+.box::before{
+    content: "";
+    position: absolute;
+
+    left:50%;
+    top: 100%;
+    transform: translateX(-50%);
+    border-top:30px solid rgb(48, 48, 48);
+    border-left: calc(50vw - 40px) solid transparent;
+    border-right: calc(50vw - 40px) solid transparent;
+}
+
+section:nth-child(3) .left::before {
+    left: 50%;
+    /* transform: translateX(-50%); */
+
+}
+
+    section:nth-child(4) .flex-box {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .icon {
+        margin-bottom: 20px;
+    }
+}
